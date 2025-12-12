@@ -17,6 +17,11 @@ $(OBJ_DIR)/%.o: %.c
 	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
 
+test: s21_string.a
+	$(CC) $(CFLAGS) main.c s21_string.a -o test_s21_string
+	./test_s21_string
+
+
 clean:
 	rm -rf $(OBJ_DIR)
 	rm -f $(LIB)
