@@ -1,7 +1,7 @@
 #ifndef S21_STRING_H
 #define S21_STRING_H
 
-// #include "stdlib.h"
+#include "stdlib.h"
 #include "stdio.h"
 
 #define _POSIX_C_SOURCE 201710L;
@@ -10,11 +10,11 @@
 
 typedef unsigned long s21_size_t;
 
-// void *memchr(const void *str, int c, size_t n)
-// int memcmp(const void *str1, const void *str2, size_t n)
-// void *memcpy(void *dest, const void *src, size_t n)
-// void *memset(void *str, int c, size_t n)
-// char *strncat(char *dest, const char *src, size_t n)
+void *memchr(const void *str, int c, s21_size_t n);
+int memcmp(const void *str1, const void *str2, s21_size_t n);
+void *memcpy(void *dest, const void *src, s21_size_t n);
+void *memset(void *str, int c, s21_size_t n);
+char *strncat(char *dest, const char *src, s21_size_t n);
 // char* strchr(const char* str, int c);
 // int strncmp(const char* str1, const char* str2, s21_size_t n);
 // char* strncpy(char* dest, const char* src, s21_size_t n);
