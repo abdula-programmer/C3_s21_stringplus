@@ -59,13 +59,15 @@ void handle_char(char* buff, s21_size_t* j, struct s21_format_spec* spec,
 
 void handle_int(char* buff, s21_size_t* j, struct s21_format_spec* spec,
                 va_list* args);
-// void handle_float(char* buff, s21_size_t* j, struct s21_format_spec* spec,
-//                   va_list* args);
-// void handle_string(char* buff, s21_size_t* j, struct s21_format_spec* spec,
-//                    va_list* args);
-// void handle_unsigned_int(char* buff, s21_size_t* j,
-//                          struct s21_format_spec* spec, va_list* args);
+void enter_in_string(char* buff, struct s21_format_spec* spec, s21_size_t* j,
+                     long long num, char* num_char);
+void handle_float(char* buff, s21_size_t* j, struct s21_format_spec* spec,
+                  va_list* args);
+void handle_string(char* buff, s21_size_t* j, struct s21_format_spec* spec,
+                   va_list* args);
+void handle_unsigned_int(char* buff, s21_size_t* j,
+                         struct s21_format_spec* spec, va_list* args);
 
 void reverse(char* str, int length);
-char* s21_itoa(int num, char* str, int base);
+char* s21_itoa(long num, char* str);
 #endif
