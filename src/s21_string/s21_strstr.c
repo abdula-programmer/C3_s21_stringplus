@@ -3,7 +3,7 @@
 // Ищет первое вхождение подстроки needle в строке haystack. Возвращает
 // указатель на начало найденной подстроки или NULL
 
-char* strstr(const char* haystack, const char* needle) {
+char* s21_strstr(const char* haystack, const char* needle) {
   char* result = NULL;
   size_t len1 = s21_strlen(haystack), len2 = s21_strlen(needle);
   if (!(haystack == NULL || needle == NULL))
